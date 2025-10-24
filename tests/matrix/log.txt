@@ -1,0 +1,80 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.9, pytest-8.4.2, pluggy-1.6.0
+rootdir: C:\Users\nostalgia\proj\Course\compute-physics
+configfile: pyproject.toml
+collected 4 items
+
+tests\matrix\test_problem.py 
+===========
+Problem 2.2
+===========
+answer
+[ 2.  2. -1.]
+verify solution:
+residual vector: [-8.8817842e-16  0.0000000e+00 -8.8817842e-16]
+residual norm: 1.2560739669470201e-15
+Pass with tolerance 1e-10
+
+.
+===========
+Problem 2.3
+===========
+answer:
+P:
+[[1. 0. 0.]
+ [0. 0. 1.]
+ [0. 1. 0.]]
+L:
+[[ 1.   0.   0. ]
+ [-0.5  1.   0. ]
+ [ 0.5 -0.5  1. ]]
+U:
+[[ 4.  2. -2.]
+ [ 0. -2. 12.]
+ [ 0.  0.  5.]]
+verify lu decomposition:
+residual norm: 0.0
+Pass with tolerance 1e-10
+
+.
+===========
+Problem 2.4
+===========
+answer:
+[2.  0.9 0.9]
+verify solution:
+residual vector: [ 0.0000000e+00  8.8817842e-16 -8.8817842e-16]
+residual norm: 1.2560739669470201e-15
+Pass with tolerance 1e-10
+
+.
+===========
+Problem 2.5
+===========
+answer:
+P:
+[[0. 1. 0.]
+ [0. 0. 1.]
+ [1. 0. 0.]]
+L:
+[[ 1.   0.   0. ]
+ [-0.5  1.   0. ]
+ [ 0.5 -0.2  1. ]]
+U:
+[[4.  7.  7. ]
+ [0.  7.5 8.5]
+ [0.  0.  1.2]]
+verify lu decomposition:
+residual norm: 0.0
+Pass with tolerance 1e-10
+
+answer:
+[ 2. -2.  1.]
+verify solution:
+residual vector: [ 0.00000000e+00  2.22044605e-16 -8.88178420e-16]
+residual norm: 9.155133597044475e-16
+Pass with tolerance 1e-10
+
+.
+
+============================== 4 passed in 0.10s ==============================

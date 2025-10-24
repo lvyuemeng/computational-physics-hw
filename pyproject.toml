@@ -1,0 +1,32 @@
+[project]
+name = "compute-physics"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "lvyuemeng", email = "lv15623448685@gmail.com" }
+]
+dependencies = [
+    "numpy>=2.3.4",
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+"compute-physics" = "compute_physics:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+managed = true
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/compute_physics"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
