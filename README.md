@@ -11,6 +11,5 @@ Each sub-directories in `compute_physics` represents each sub-modules of section
 Prerequisite: `uv, git`
 
 ```bash
-git clone [remote-url] \
-uv run pytest // run all test
+git clone [remote-url] && cd [repository-name] && uv run pytest
 ```
