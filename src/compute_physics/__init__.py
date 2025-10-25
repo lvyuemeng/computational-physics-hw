@@ -3,5 +3,6 @@ def print_header(index: str, desc: str = ""):
     sep = "=" * len(title)
     print(f"\n{sep}\n{title}\n{sep}")
 
+
 def main() -> int:
     return 0

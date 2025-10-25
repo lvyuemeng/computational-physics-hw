@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def partial_pivoting_gauss(A: np.ndarray, b: np.ndarray):
     n = len(A)
     Ab = np.hstack([A.astype(float), b.reshape(-1, 1).astype(float)])
@@ -16,8 +17,9 @@ def partial_pivoting_gauss(A: np.ndarray, b: np.ndarray):
 
     x = np.zeros(n)
     for i in range(n - 1, -1, -1):
-        x[i] = (Ab[i, -1] - np.dot(Ab[i, i + 1:n], x[i + 1:n])) / Ab[i, i]
+        x[i] = (Ab[i, -1] - np.dot(Ab[i, i + 1 : n], x[i + 1 : n])) / Ab[i, i]
     return x
+
 
 def lu(A: np.ndarray):
     n = len(A)
@@ -42,6 +44,7 @@ def lu(A: np.ndarray):
 
     return P, L, U
 
+
 def solve_by_lu(P: np.ndarray, L: np.ndarray, U: np.ndarray, b: np.ndarray):
     n = len(b)
     Pb = P.dot(b)
@@ -52,5 +55,5 @@ def solve_by_lu(P: np.ndarray, L: np.ndarray, U: np.ndarray, b: np.ndarray):
 
     x = np.zeros(n)
     for i in range(n - 1, -1, -1):
-        x[i] = (y[i] - np.dot(U[i, i + 1:], x[i + 1:])) / U[i, i]
+        x[i] = (y[i] - np.dot(U[i, i + 1 :], x[i + 1 :])) / U[i, i]
     return x
